@@ -1,0 +1,23 @@
+{
+  "name": "travel-server",
+  "version": "1.0.0",
+  "description": "AI 智能旅游规划服务端，基于 Node.js + Express + LangChain",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "check": "node --check src/app.js && node --check src/index.js && node --check src/routes/travel.js && node --check src/services/travelServices.js && node --check src/services/travelAgentService.js && node --check src/agent/travelAgent.js && node --check src/agent/travelTools.js && node --check src/agent/memoryStore.js && node --check src/agent/ragStore.js && node --check src/data/travelKnowledge.js && node --check src/utils/streamUtils.js && node --check src/utils/validators.js && node --check scripts/eval-agent.js",
+    "eval:agent": "node scripts/eval-agent.js"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.1.41",
+    "@langchain/openai": "^1.4.4",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.14",
+    "cors": "^2.8.5"
+  }
+}
